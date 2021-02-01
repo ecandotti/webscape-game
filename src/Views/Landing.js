@@ -15,7 +15,7 @@ export default class Landing extends React.Component{
                 <div className="App">
                     <div className="overlap">
                         <div className="title">
-                            <p>ESCAPE GAME : LES GALERES DE JEAN_PIERRE</p>
+                            <p>ESCAPE GAME : LES GALERES DE JEAN-MICHEL</p>
                         </div>
                         <div className="intro">
                             <p>Bonjour et bienvenue sur notre projet de groupe réalisé dans le cadre du Challenge 48h.</p>
