@@ -26,7 +26,6 @@ export default class App extends React.Component{
 
   render() {
     const { viewId } = this.state;
-
     switch (viewId) {
       case 0:
         return (

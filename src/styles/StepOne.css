@@ -1,0 +1,47 @@
+.StepOneContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.LeftSide {
+    height: 100vh;
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+}
+
+.TextContainer {
+    display: block;
+    flex-direction: column;
+    flex: 6;
+    border: 2px solid #000;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.Text {
+
+}
+
+.GoalWordContainer {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.RightSide {
+    flex: 3;
+    padding: 3rem;
+
+}
+
+.DescriptionText {
+
+}
