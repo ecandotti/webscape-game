@@ -47,6 +47,7 @@
 
 button {
   margin-bottom: 2rem;
+  margin-top: 25px;
   border: 0;
   line-height: 2.5;
   padding: 0 20px;
@@ -64,11 +65,17 @@ button {
 
 
 .overlap {
+  border-radius: 25px;
+  border: #bdcdec 6px solid;
   width: 60rem;
   height: 40rem;
 }
 
 .intro {
-  width: 50rem;
-  height: 30rem;
+  border-radius: 25px;
+  border: #dae3f5 2px solid;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  padding: 10px;
 }
