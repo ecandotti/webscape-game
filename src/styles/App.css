@@ -58,3 +58,17 @@ button {
   border-radius: 10px;
   background-color: rgb(1, 23, 220);
 }
+
+.App {
+  display: flex;
+}
+
+.overlap {
+  width: 60rem;
+  height: 40rem;
+}
+
+.intro {
+  width: 50rem;
+  height: 30rem;
+}

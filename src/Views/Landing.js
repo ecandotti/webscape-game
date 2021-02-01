@@ -13,6 +13,16 @@ export default class Landing extends React.Component{
     render() {
         const { setViewId } = this.props;
         return (
+<<<<<<< HEAD
+                <div className="App">
+                    <div className="overlap">
+                        <div className="title">
+                            <p>Escape Game</p>
+                        </div>
+                        <div className="intro">
+                            <p></p>
+                        </div>  
+=======
             <div className="App">
                 <div className="overlap">
                     <div className="title">
@@ -25,12 +35,17 @@ export default class Landing extends React.Component{
                         </p>
                         <p>Le principe est simple, vous devrez résoudre plusieurs mini-jeux / énigmes afin de pouvoir avancer dans l’histoire et aider Jean-Michel à pouvoir travailler sans embûches.</p>
                         <p>Appuyez sur le bouton ‘Commencer’ pour débuter la partie.</p>
+>>>>>>> d9526123a5e04d07e696e168b9630ca0fbd275e5
                     </div>
                     <div>
-                        <button onClick={() => setViewId(1)}> Commencer </button>
+                        <button onClick={() => setViewId(2)}> Commencer </button>
                     </div>
                 </div>
+<<<<<<< HEAD
+            
+=======
             </div>
+>>>>>>> d9526123a5e04d07e696e168b9630ca0fbd275e5
         )
     }
 }
