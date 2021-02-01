@@ -1,0 +1,17 @@
+
+
+.overlap {
+    border-radius: 25px;
+    border: #bdcdec 6px solid;
+    width: 60rem;
+    height: 40rem;
+}
+
+.intro {
+    border-radius: 25px;
+    border: #dae3f5 2px solid;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+}
