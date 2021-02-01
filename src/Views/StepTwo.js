@@ -29,7 +29,9 @@ export default class StepTwo extends React.Component {
         return (
             <div className="App">
                 <div className="loginBox">
-                    <p>Login</p>
+                    <div className="title">
+                        <h2>Login</h2>
+                    </div>
                     <div className="inputLogin">
                         <label className="inputText">Email</label>
                         <input className="inputInput" type="text" name="email" value={email}
@@ -41,7 +43,7 @@ export default class StepTwo extends React.Component {
                                onChange={this.handleChangeMdp}/>
                     </div>
                     <div className="inputBottom">
-                        <a style={{position: "absolute", left: 0, cursor: "pointer"}} onClick={() => setViewId(3)}>
+                        <a className="mdpoublie" onClick={() => setViewId(3)}>
                             Mot de passe oublié ?
                         </a>
                         <input className="inputSubmit" value="Connexion" onClick={this.handleSubmit}/>
