@@ -28,6 +28,10 @@
 
 }
 
+.specialText:hover {
+    color: red;
+}
+
 .specialText {
     cursor: pointer;
 }
