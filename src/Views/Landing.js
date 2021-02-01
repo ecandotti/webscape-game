@@ -9,7 +9,6 @@ export default class Landing extends React.Component{
         }
     }
 
-
     render() {
         const { setViewId } = this.props;
         return (
@@ -25,8 +24,7 @@ export default class Landing extends React.Component{
                             </p>
                             <p>Le principe est simple, vous devrez résoudre plusieurs mini-jeux / énigmes afin de pouvoir avancer dans l’histoire et aider Jean-Michel à pouvoir travailler sans embûches.</p>
                             <p>Appuyez sur le bouton ‘Commencer’ pour débuter la partie.</p>
-                        </div>  
-
+                        </div>
                         <div>
                             <button onClick={() => setViewId(1)}> Commencer </button>
                         </div>

@@ -20,7 +20,7 @@ export default class App extends React.Component{
   }
 
   setViewId = (viewId) => {
-    this.setState({viewId})
+    this.setState({ viewId })
   };
 
 
