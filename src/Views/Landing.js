@@ -14,16 +14,9 @@ export default class Landing extends React.Component{
         const { setViewId } = this.props;
         return (
             <div className="App">
-                <p>landing page</p>
+                <p>Titre</p>
 
-                <button onClick={() => setViewId(0)}> landing </button>
-                <button onClick={() => setViewId(1)}> step 1 </button>
-                <button onClick={() => setViewId(2)}> step 2 </button>
-                <button onClick={() => setViewId(3)}> step 3 </button>
-                <button onClick={() => setViewId(4)}> step 4 </button>
-                <button onClick={() => setViewId(5)}> step 5 </button>
-                <button onClick={() => setViewId(6)}> step 6 </button>
-                <button onClick={() => setViewId(7)}> step 7 </button>
+                <button onClick={() => setViewId(1)}> continuer </button>
             </div>
         )
     }

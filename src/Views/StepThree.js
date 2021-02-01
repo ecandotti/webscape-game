@@ -22,7 +22,8 @@ export default class StepThree extends React.Component{
                 <button onClick={() => setViewId(4)}> step 4 </button>
                 <button onClick={() => setViewId(5)}> step 5 </button>
                 <button onClick={() => setViewId(6)}> step 6 </button>
-                <button onClick={() => setViewId(7)}> step 7 </button>            </div>
+                <button onClick={() => setViewId(7)}> step 7 </button>
+            </div>
         )
     }
 }
