@@ -15,17 +15,36 @@ export default class App extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      viewId: 7
-    }
+      viewId: 7,
+      loginState: {
+        email: "LeBossDu13",
+        password: "",
+        redirected: false
+      }
+    };
+    // this.state = {
+    //   viewId: 7
+    // } // biography
   }
 
   setViewId = (viewId) => {
     this.setState({ viewId })
   };
 
+  redirectToLogin = () => {
+      this.setState({
+        viewId: 2,
+        loginState: {
+          email: "JSUnHacker",
+          password: "p@ssw0rd",
+          redirected: true
+        }
+      })
+  };
+
 
   render() {
-    const { viewId } = this.state;
+    const { viewId, loginState } = this.state;
     switch (viewId) {
       case 0:
         return (
@@ -37,11 +56,11 @@ export default class App extends React.Component{
         );
       case 2:
         return (
-            <StepTwo setViewId={this.setViewId} />
+            <StepTwo loginState={loginState} setViewId={this.setViewId} />
         );
       case 3:
         return (
-            <StepThree setViewId={this.setViewId} />
+            <StepThree redirectToLogin={this.redirectToLogin} setViewId={this.setViewId} />
         );
       case 4:
         return (

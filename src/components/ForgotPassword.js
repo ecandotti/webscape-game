@@ -40,6 +40,7 @@ export default class ForgotPassword extends React.Component{
         const { showPassword, showError } = this.state;
         return (
             <div className="App">
+                <div className="close" onClick={closeModal}><span>✖</span></div>
                 <div className="container">
                     <div className="inputAnswer">
                         <label className="inputText">Quel était le nom de votre animal de compagnie</label>

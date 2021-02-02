@@ -24,3 +24,7 @@
 .prompt:focus {
     outline: none;
 }
+
+.hakerLogin {
+    cursor: pointer;
+}
