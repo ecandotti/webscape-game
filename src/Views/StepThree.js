@@ -36,7 +36,6 @@ export default class StepThree extends React.Component {
     };
 
     touchTerminal = () => {
-
         this.setState({isOpenTerminal: !this.state.isOpenTerminal})
     };
 
