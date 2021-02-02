@@ -1,14 +1,21 @@
-import React from "react"
+import React from "react";
+import Modal from 'react-modal';
+import ForgotPassword from "../components/ForgotPassword";
 import '../styles/App.css';
 import '../styles/StepTwo.css'
+
+Modal.setAppElement('#root');
 
 export default class StepTwo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             email: "",
-            password: ""
+            password: "",
+            isModalOpen: false
         };
+
+
     }
 
     handleChangeEmail = (event) => {
@@ -23,13 +30,19 @@ export default class StepTwo extends React.Component {
         console.log('Login');
     };
 
+    openModal = () => {
+          const { isModalOpen } = this.state;
+          this.setState({isModalOpen: !isModalOpen})
+    };
+
     render() {
         const { setViewId } = this.props;
-        const { email, password } = this.state;
+        const { email, password, isModalOpen } = this.state;
+        console.log(isModalOpen)
         return (
             <div className="App">
                 <div className="loginBox">
-                    <div className="title">
+                    <div className="titre">
                         <h2>Login</h2>
                     </div>
                     <div className="inputLogin">
@@ -43,10 +56,13 @@ export default class StepTwo extends React.Component {
                                onChange={this.handleChangeMdp}/>
                     </div>
                     <div className="inputBottom">
-                        <a className="mdpoublie" onClick={() => setViewId(3)}>
+                        <a className="mdpoublie" onClick={() => this.openModal()}>
                             Mot de passe oublié ?
                         </a>
                         <bouton className="inputSubmit" onClick={this.handleSubmit}>Connexion</bouton>
+                        <Modal isOpen={isModalOpen}>
+                            <ForgotPassword closeModal={this.openModal} />
+                        </Modal>
                     </div>
                 </div>
             </div>
