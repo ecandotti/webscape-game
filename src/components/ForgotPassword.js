@@ -32,7 +32,7 @@ export default class ForgotPassword extends React.Component{
     };
 
     render() {
-        const { setViewId } = this.props;
+        const { closeModal } = this.props;
         const { showPassword } = this.state;
         return (
             <div className="App">
@@ -50,7 +50,7 @@ export default class ForgotPassword extends React.Component{
                     <div className="inputAnswer">
                         <label className="inputText">Quel sport pratiquiez vous enfant ?</label>
                         <input className="inputInput" type="text" name="sport"
-                               onChange={this.handleChangeAnimal}/>
+                               onChange={this.handleChangeSport}/>
                     </div>
                     <button className="start" style={{ marginTop: "2rem" }} onClick={this.handleSubmit}>Valider</button>
                     {showPassword && (
