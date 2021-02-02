@@ -5,12 +5,11 @@
 }
 
 .dog {
-    width: 25%;
+    width: 40%;
 }
 
 .secondFlex {
     display: flex;
-    padding: 5rem;
 }
 
 .bowling {
@@ -21,4 +20,26 @@
 .bowling:hover,
 .bowling:focus {
     opacity: 1;
+}
+
+.doggy .dogname {
+    visibility: hidden;
+    width: 120px;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.doggy {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10em;
+}
+
+.doggy:hover .dogname {
+    visibility: visible;
+    padding-top: 9em;
 }
