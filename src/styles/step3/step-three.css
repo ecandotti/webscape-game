@@ -1,0 +1,129 @@
+.container {
+    padding: 10px 50px 10px 50px;
+}
+
+.window {
+    background-color: #ecf0f1;
+    border: 1px solid #2c3e50;
+    border-radius: 5px;
+    color: #2d3436;
+    width: 100%;
+}
+
+/* HEADER WINDOW */
+
+.header-window {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 5px;
+    justify-content: space-between;
+    border-bottom: 1px solid #424d50;
+    background-color: #dbdcdd;
+    user-select: none;
+}
+
+/* TOP PANEL */
+
+.top-panel {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #2d3436;
+}
+
+.top-panel > span {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #2d3436;
+    background-color: #2d3436;
+    border-radius: 5px;
+}
+
+.path {
+    width: 100%;
+    border: 1px solid #2d3436;
+    border-radius: 2px;
+    background-color: #f4f9fa;
+    padding: 5px 10px 5px 10px;
+    margin: 0px 5px 0px 5px;
+    user-select: none;
+    font-size: 20px;
+}
+
+/* MAIN CONTENT */
+
+.main-content {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+/* LEFT PANEL */
+
+.left-panel {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: left;
+    border-right: 1px solid #2d3436;
+    font-size: 20px;
+}
+
+.left-panel > span {
+    border: 0px solid #2d3436;
+    padding: 10px 20px 10px 20px;
+    user-select: none;
+}
+
+.hoverable {
+    border: 0px solid #ecf0f1;
+    cursor: no-drop;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.hoverable:hover {
+    border-color: #74baffef;
+    background-color: #74baffb4;
+    cursor: no-drop;
+}
+
+#executable {
+    cursor: pointer;
+}
+
+/* CONTENT */
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 10px;
+}
+
+.file {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    border: 0px solid #ecf0f1;
+    padding: 15px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.file:hover {
+    border-color: #74baffef;
+    background-color: #74baffb4;
+}
+
+.file > img {
+    width: 50px;
+    height: 50px;
+}
+
+.file > span {
+    margin: 5px;
+    font-size: 18px;
+}
