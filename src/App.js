@@ -15,7 +15,7 @@ export default class App extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      viewId: 7,
+      viewId: 0,
       loginState: {
         email: "LeBossDu13",
         password: "",
