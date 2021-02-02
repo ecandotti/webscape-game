@@ -11,7 +11,7 @@ const Terminal = ({touchTerminal, setWriteValidCommand}) => {
             Unexpected error during the executinon of the command<br/>
             Error at line 15 character 106<br/>
             Oups no character 5 of line 1<br/>
-            Id:JSUnHacker mdp: ********<br/>
+            <span onClick={() => console.log('redirection')}>ID:JSUnHacker PWD: p@ssw0rd</span><br/>
             But ****** Why, am i broken ?<br/>
             Something is wrong<br/>
             Maybe my RAM is broken :()<br/>

@@ -4,7 +4,7 @@ const ErrorLog = ({touchErrorLog}) => {
     return ( 
         <div className='error-window'>
             <div className='header-window'>
-                <span>error.log</span>
+                <span>error.txt</span>
                 <div className='right-side'>
                     <span>_</span>
                     <span>&#9633;</span>
@@ -170,7 +170,7 @@ const ErrorLog = ({touchErrorLog}) => {
 
                         EX5103:<br/>
                             RAM IS INSUFFICIENT<br/>
-                                Execute ram -u -info<br/><br/>
+                                Execute ram -u --info<br/><br/>
 
 
                         R0YSKQ:<br/>
