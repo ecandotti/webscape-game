@@ -16,7 +16,10 @@ export default class App extends React.Component{
     super(props);
     this.state = {
       viewId: 0
-    }
+    };
+    // this.state = {
+    //   viewId: 7
+    // } // biography
   }
 
   setViewId = (viewId) => {
