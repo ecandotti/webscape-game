@@ -1,28 +1,54 @@
 import React from "react"
 import '../styles/App.css';
+import '../styles/StepTwo.css'
 
-export default class StepTwo extends React.Component{
+export default class StepTwo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            state: "state"
-        }
+            email: "",
+            password: ""
+        };
     }
 
+    handleChangeEmail = (event) => {
+        this.setState({email: event.target.value});
+    };
+
+    handleChangeMdp = (event) => {
+        this.setState({password: event.target.value});
+    };
+
+    handleSubmit = () => {
+        console.log('Login');
+    };
 
     render() {
         const { setViewId } = this.props;
+        const { email, password } = this.state;
         return (
             <div className="App">
-                <p>Step Two</p>
-                <button onClick={() => setViewId(0)}> landing </button>
-                <button onClick={() => setViewId(1)}> step 1 </button>
-                <button onClick={() => setViewId(2)}> step 2 </button>
-                <button onClick={() => setViewId(3)}> step 3 </button>
-                <button onClick={() => setViewId(4)}> step 4 </button>
-                <button onClick={() => setViewId(5)}> step 5 </button>
-                <button onClick={() => setViewId(6)}> step 6 </button>
-                <button onClick={() => setViewId(7)}> step 7 </button>
+                <div className="loginBox">
+                    <div className="title">
+                        <h2>Login</h2>
+                    </div>
+                    <div className="inputLogin">
+                        <label className="inputText">Email</label>
+                        <input className="inputInput" type="text" name="email" value={email}
+                               onChange={this.handleChangeEmail}/>
+                    </div>
+                    <div className="inputLogin">
+                        <label className="inputText">Mot de passe</label>
+                        <input className="inputInput" type="password" name="mdp" value={password}
+                               onChange={this.handleChangeMdp}/>
+                    </div>
+                    <div className="inputBottom">
+                        <a className="mdpoublie" onClick={() => setViewId(3)}>
+                            Mot de passe oublié ?
+                        </a>
+                        <input className="inputSubmit" value="Connexion" onClick={this.handleSubmit}/>
+                    </div>
+                </div>
             </div>
         )
     }

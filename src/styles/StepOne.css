@@ -14,7 +14,7 @@
 }
 
 .TextContainer {
-    display: block;
+    display: flex;
     flex-direction: column;
     flex: 6;
     border: 2px solid #000;
@@ -26,6 +26,14 @@
 
 .Text {
 
+}
+
+.specialText:hover {
+    color: red;
+}
+
+.specialText {
+    cursor: pointer;
 }
 
 .GoalWordContainer {
