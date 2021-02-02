@@ -46,7 +46,7 @@ export default class StepTwo extends React.Component {
                         <a className="mdpoublie" onClick={() => setViewId(3)}>
                             Mot de passe oublié ?
                         </a>
-                        <input className="inputSubmit" value="Connexion" onClick={this.handleSubmit}/>
+                        <bouton className="inputSubmit" onClick={this.handleSubmit}>Connexion</bouton>
                     </div>
                 </div>
             </div>
