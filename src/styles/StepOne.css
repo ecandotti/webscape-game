@@ -55,6 +55,11 @@
 
 }
 
+.DescriptionText.title {
+    color: white;
+    font-size: 1em;
+}
+
 h2{
     padding: 0%;
 }

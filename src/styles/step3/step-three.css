@@ -13,7 +13,7 @@
 /* HEADER WINDOW */
 
 .header-window {
-    position: static;
+    position: sticky;
     display: flex;
     flex-flow: row nowrap;
     padding: 5px;
@@ -21,10 +21,6 @@
     border-bottom: 1px solid #424d50;
     background-color: #dbdcdd;
     user-select: none;
-}
-
-.right-side {
-    margin-right: 10px;
 }
 
 /* TOP PANEL */
@@ -97,6 +93,10 @@
     cursor: pointer;
 }
 
+#current-user {
+    color: blue;
+}
+
 /* CONTENT */
 
 .content {
@@ -131,4 +131,10 @@
 .file > span {
     margin: 5px;
     font-size: 18px;
+}
+
+/* ERROR CONTENT */
+.error-item > p {
+    overflow-y: scroll;
+    height: 600px;
 }
