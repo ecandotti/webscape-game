@@ -24,7 +24,7 @@ export default class Landing extends React.Component{
                     </div>
                     
                     <div>
-                        <button onClick={() => setViewId(3)}> Commencer </button>
+                        <button onClick={() => setViewId(1)}> Commencer </button>
                     </div>
                 </div>
             
