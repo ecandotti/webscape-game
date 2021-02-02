@@ -50,6 +50,20 @@ body, html {
   }
 }
 
-.App {
+.fisrtFlex {
   display: flex;
+  padding: 5rem;
+}
+
+.dog {
+  width: 25%;
+}
+
+.secondFlex {
+  display: flex;
+  padding: 5rem;
+}
+
+.bowling {
+  width: 25%;
 }

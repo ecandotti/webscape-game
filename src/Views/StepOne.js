@@ -157,7 +157,9 @@ export default class StepOne extends React.Component{
                             Commentaire: je n'ai pas de quoi nourrir
                             mes enfants aled
                         </p>
-
+                        <p className="DescriptionText">
+                            <a href="" className="jeanmich">Voir plus</a>
+                        </p>
                     </div>
                 </div>
             </div>
