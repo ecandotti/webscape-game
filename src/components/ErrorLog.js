@@ -170,7 +170,7 @@ const ErrorLog = ({touchErrorLog}) => {
 
                         EX5103:<br/>
                             RAM IS INSUFFICIENT<br/>
-                                Execute ram -u -info<br/><br/>
+                                Execute ram -u --info<br/><br/>
 
 
                         R0YSKQ:<br/>

@@ -1,20 +1,18 @@
 import React from 'react'
 import Modal from 'react-modal'
-
 import ErrorMsg from '../components/ErrorMsg'
 import ErrorLog from '../components/ErrorLog'
 import Terminal from '../components/Terminal'
 import Script from '../components/Script'
-
 import '../styles/App.css'
 import '../styles/step3/step-three.css'
 
 
-Modal.setAppElement('#root')
+Modal.setAppElement('#root');
 
 export default class StepThree extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
             state: 'state',
             isOpenLog: false,
@@ -23,48 +21,40 @@ export default class StepThree extends React.Component {
             isOpenErrorMsg: false,
             errorGenerated: false,
             writeValidCommand: false
-        }
-        this.touchErrorLog = this.touchErrorLog.bind(this)
-        this.touchTerminal = this.touchTerminal.bind(this)
-        this.touchErrorMsg = this.touchErrorMsg.bind(this)
-        this.setWriteValidCommand = this.setWriteValidCommand.bind(this)
-        this.touchScript = this.touchScript.bind(this)
+        };
     }
 
-    touchScript() {
+    touchScript = () => {
         this.setState({isOpenScript: false})
-    }
+    };
 
-    touchErrorLog() {
+    touchErrorLog = () => {
         this.setState({isOpenLog: !this.state.isOpenLog})
-    }
+    };
     
 
-    touchErrorMsg() {
+    touchErrorMsg = () => {
         this.setState({isOpenErrorMsg: !this.state.isOpenErrorMsg})
-    }
+    };
 
-    touchTerminal() {
+    touchTerminal = () =>  {
         this.setState({isOpenTerminal: !this.state.isOpenTerminal})
-    }
+    };
 
-    setWriteValidCommand() {
-        this.setState({writeValidCommand: true})
+    setWriteValidCommand = () => {
+        this.setState({writeValidCommand: true});
         console.log('validate !')
-    }
+    };
 
-    openScript() {
+    openScript = () => {
         if (!this.state.errorGenerated) {
-            this.setState({errorGenerated: true})
-            this.touchErrorMsg()
-            console.log('fichier log généré')
+            this.setState({errorGenerated: true});
+            this.touchErrorMsg();
         } else if (this.state.errorGenerated && this.state.writeValidCommand) {
-            this.setState({ isOpenScript: true })
-            console.log('done')
+            this.setState({ isOpenScript: true });
         } else {
-            console.log('error')
         }
-    }
+    };
 
     render() {
         return (

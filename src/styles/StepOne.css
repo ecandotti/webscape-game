@@ -42,7 +42,7 @@
     flex: 2;
     display: flex;
     justify-content: center;
-
+    cursor: pointer;
 }
 
 .RightSide {
