@@ -15,7 +15,7 @@ export default class App extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      viewId: 1
+      viewId: 0
     }
   }
 
