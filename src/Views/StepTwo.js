@@ -14,6 +14,7 @@ export default class StepTwo extends React.Component {
             password: "",
             isModalOpen: false,
             wrongPassword: false,
+            ...props.loginState
         };
     }
 
@@ -26,11 +27,14 @@ export default class StepTwo extends React.Component {
     };
 
     handleSubmit = () => {
-        const { password } = this.state;
+        const { password, email } = this.state;
         const { setViewId } = this.props;
-        if (password === "MotDePasse12345") {
+        if (email === "LeBossDu13" && password === "MotDePasse12345") {
             setViewId(3)
-        } else {
+        } else if (email === "JSUnHacker" && password === "p@ssw0rd") {
+            setViewId(4)
+        }
+        else {
             this.setState({wrongPassword: true})
         }
     };
@@ -41,6 +45,7 @@ export default class StepTwo extends React.Component {
     };
 
     render() {
+        console.log(this.state);
         const { email, password, isModalOpen, wrongPassword } = this.state;
         return (
             <div className="App">
@@ -50,7 +55,7 @@ export default class StepTwo extends React.Component {
                     </div>
                     <div className="inputLogin">
                         <label className="inputText">Nom d'utilisateur</label>
-                        <input className="inputInput" type="text" name="email" value="LeBossDu13" disabled
+                        <input className="inputInput" type="text" name="email" value={email} disabled
                                onChange={this.handleChangeEmail}/>
                     </div>
                     <div className="inputLogin">
@@ -68,6 +73,7 @@ export default class StepTwo extends React.Component {
                                 <p className="wrong" style={{color: "red"}}> mauvais mot de passe </p> :
                                 <> </>
                         }
+
                         <Modal isOpen={isModalOpen}>
                             <ForgotPassword closeModal={this.openModal} />
                         </Modal>
