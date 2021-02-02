@@ -2,24 +2,40 @@ import React from "react"
 import '../styles/App.css';
 import '../styles/StepOne.css';
 
+const validatedGoalChars = [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+];
+
 export default class StepOne extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            goalChars: [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-            ]
+            // goalChars: [
+            //     false,
+            //     false,
+            //     false,
+            //     false,
+            //     false,
+            //     false,
+            //     false,
+            //     false,
+            //     false,
+            //     false,
+            //     false,
+            //     false,
+            // ]
+            goalChars: validatedGoalChars
         }
     }
 
@@ -30,10 +46,19 @@ export default class StepOne extends React.Component{
         console.log(goalChars);
     };
 
+    isPasswordFound = () => {
+        const { setViewId } = this.props;
+        const { goalChars } = this.state;
+        if (goalChars === validatedGoalChars) {
+            setViewId(2)
+        }
+    };
+
 
 
     render() {
         const { goalChars } = this.state;
+
         return (
             <div className="App">
                 <div className="StepOneContainer">
@@ -80,24 +105,25 @@ export default class StepOne extends React.Component{
 
                             </p>
                         </div>
-                        <div className="GoalWordContainer">
-                            {
-                            // TODO faire une boucle ;)
-                             }
-                            {goalChars[0] ? (<p>L</p>) : <> </>}
-                            {goalChars[1] ? (<p>e</p>) : <> </>}
-                            {goalChars[2] ? (<p>B</p>) : <> </>}
-                            {goalChars[3] ? (<p>o</p>) : <> </>}
-                            {goalChars[4] ? (<p>s</p>) : <> </>}
-                            {goalChars[5] ? (<p>s</p>) : <> </>}
-                            {goalChars[6] ? (<p>D</p>) : <> </>}
-                            {goalChars[7] ? (<p>u</p>) : <> </>}
-                            {goalChars[8] ? (<p>1</p>) : <> </>}
-                            {goalChars[9] ? (<p>3</p>) : <> </>}
+                        <div className="GoalWordContainer" onClick={this.isPasswordFound}>
+                                {
+                                // TODO faire une boucle ;)
+                                 }
+                                {goalChars[0] ? (<p>L</p>) : <> </>}
+                                {goalChars[1] ? (<p>e</p>) : <> </>}
+                                {goalChars[2] ? (<p>B</p>) : <> </>}
+                                {goalChars[3] ? (<p>o</p>) : <> </>}
+                                {goalChars[4] ? (<p>s</p>) : <> </>}
+                                {goalChars[5] ? (<p>s</p>) : <> </>}
+                                {goalChars[6] ? (<p>D</p>) : <> </>}
+                                {goalChars[7] ? (<p>u</p>) : <> </>}
+                                {goalChars[8] ? (<p>1</p>) : <> </>}
+                                {goalChars[9] ? (<p>3</p>) : <> </>}
                         </div>
                     </div>
                     <div className="RightSide">
-                        <p className="DescriptionText">
+
+                            <p className="DescriptionText">
                             Biographie de Jean-Michel MICHEL
                         </p>
                         <p className="DescriptionText">
@@ -133,6 +159,7 @@ export default class StepOne extends React.Component{
                             Commentaire: je n'ai pas de quoi nourrir
                             mes enfants aled
                         </p>
+
                     </div>
                 </div>
             </div>

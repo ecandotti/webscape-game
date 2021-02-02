@@ -40,7 +40,7 @@ export default class StepTwo extends React.Component {
                     </div>
                     <div className="inputLogin">
                         <label className="inputText">Nom d'utilisateur</label>
-                        <input className="inputInput" type="text" name="email"
+                        <input className="inputInput" type="text" name="email" value="LeBossDu13" disabled
                                onChange={this.handleChangeEmail}/>
                     </div>
                     <div className="inputLogin">

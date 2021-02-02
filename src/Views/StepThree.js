@@ -1,19 +1,17 @@
 import React from 'react'
 import Modal from 'react-modal'
-
 import ErrorMsg from '../components/ErrorMsg'
 import ErrorLog from '../components/ErrorLog'
 import Terminal from '../components/Terminal'
-
 import '../styles/App.css'
 import '../styles/step3/step-three.css'
 
 
-Modal.setAppElement('#root')
+Modal.setAppElement('#root');
 
 export default class StepThree extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
             state: 'state',
             isOpenLog: false,
@@ -21,37 +19,39 @@ export default class StepThree extends React.Component {
             isOpenErrorMsg: false,
             errorGenerated: false,
             writeValidCommand: false
-        }
+        };
     }
+
+    touchScript = () => {
+        this.setState({isOpenScript: false})
+    };
 
     touchErrorLog = () => {
         this.setState({isOpenLog: !this.state.isOpenLog})
-    }
+    };
     
 
     touchErrorMsg = () => {
         this.setState({isOpenErrorMsg: !this.state.isOpenErrorMsg})
-    }
+    };
 
     touchTerminal = () => {
+
         this.setState({isOpenTerminal: !this.state.isOpenTerminal})
-    }
+    };
 
     setWriteValidCommand = () => {
-        this.setState({writeValidCommand: true})
-        console.log('validate !')
-    }
+        this.setState({writeValidCommand: true});
+    };
 
     openScript = () => {
         if (!this.state.errorGenerated) {
-            this.setState({errorGenerated: true})
-            this.touchErrorMsg()
-            console.log('fichier log généré')
+            this.setState({errorGenerated: true});
+            this.touchErrorMsg();
         } else {
-            this.touchErrorMsg()
-            console.log('fichier log regénéré')
+            this.touchErrorMsg();
         }
-    }
+    };
 
     render() {
         return (
