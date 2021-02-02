@@ -16,7 +16,7 @@ export default class Landing extends React.Component{
             <div className="App">
                 <div className="overlap">
                     <div className="title">
-                        <h2>ESCAPE GAME : LES GALERES DE JEAN-MICHEL</h2>
+                        <h2 style={{color: '#32ff7e'}}>ESCAPE GAME : LES GALERES DE JEAN-MICHEL</h2>
                     </div>
                     <div className="intro">
                         <p>

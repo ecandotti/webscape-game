@@ -8,6 +8,7 @@ import StepFour from "./Views/StepFour";
 import StepFive from "./Views/StepFive";
 import StepSix from "./Views/StepSix";
 import StepSeven from "./Views/StepSeven";
+import StepEight from "./Views/StepEight";
 
 // View Id => 0 = landing,
 
@@ -77,6 +78,10 @@ export default class App extends React.Component{
       case 7:
         return (
             <StepSeven setViewId={this.setViewId} />
+        );
+      case 8:
+        return (
+            <StepEight setViewId={this.setViewId} />
         );
 
       default:
