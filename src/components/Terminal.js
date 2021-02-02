@@ -2,34 +2,34 @@ import React, { useState } from 'react'
 
 import '../styles/step3/terminal.css'
 
-const Terminal = ({touchTerminal, setWriteValidCommand}) => {
-    const [commandLine, isCorrectCommandLine] = useState(false)
-    const [prompt, setPrompt] = useState('')
+const Terminal = ({touchTerminal, setWriteValidCommand, redirectToLogin}) => {
+    const [commandLine, isCorrectCommandLine] = useState(false);
+    const [prompt, setPrompt] = useState('');
 
     const message = 
         <div>
             Unexpected error during the executinon of the command<br/>
             Error at line 15 character 106<br/>
             Oups no character 5 of line 1<br/>
-            <span onClick={() => console.log('redirection')}>ID:JSUnHacker PWD: p@ssw0rd</span><br/>
+            <span className="hakerLogin" onClick={() => redirectToLogin()}>ID:JSUnHacker PWD: p@ssw0rd</span><br/>
             But ****** Why, am i broken ?<br/>
             Something is wrong<br/>
             Maybe my RAM is broken :()<br/>
             Ah it's why you executed me<br/>
             Sorry but, I'm not available for the moment!
-        </div>
+        </div>;
 
     const verifyCommand = ({key, target}) => {
         if(key === 'Enter'){
-            console.log('enter pressed')
             if (target.value === 'ram -u --info') {
-                setWriteValidCommand()
-                isCorrectCommandLine(true)
+                setWriteValidCommand();
+                isCorrectCommandLine(true);
                 setPrompt('')
             }
             setPrompt('')
         }
-    }
+    };
+
     return (
         <div className='terminal-window'>
             <div className='header-window'>
