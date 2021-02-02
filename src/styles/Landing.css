@@ -42,6 +42,7 @@ h2 {
 .start:focus {
     background-color: #eee;
     color: rgb(1, 23, 220);
+    outline: none;
 }
 
 @media screen and (width: 320px)  {
