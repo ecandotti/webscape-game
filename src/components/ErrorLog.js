@@ -29,7 +29,7 @@ const ErrorLog = ({touchErrorLog}) => {
                         at Function.i._load (/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:1061:334)
                         at Function.n._load (/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:1057:567)
                         at Module.require (internal/modules/cjs/loader.js:899:19)<br/>
-                        <strong>RAM is insufficient execute :</strong> ram -u -info<br/>
+                        <strong>RAM is insufficient execute :</strong> ram -u --info<br/>
                         at r (/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/loader.js:16:346)
                         at t.ModuleResolver.loadNodeModule (/Users/ecandotti/.vscode/extensions/esbenp.prettier-vscode-5.8.0/dist/extension.js:1:8788)
                         at t.ModuleResolver.requireLocalPkg (/Users/ecandotti/.vscode/extensions/esbenp.prettier-vscode-5.8.0/dist/extension.js:1:7919)
