@@ -1,28 +1,43 @@
-import React from "react"
-import '../styles/App.css';
+import React from 'react'
+
+import '../styles/App.css'
+import '../styles/step5/step-five.css'
 
 export default class StepFive extends React.Component{
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
-            state: "state"
+            isOpenEditScript: false
         }
     }
 
+    touchEditScript = () => {
+        this.setState({isOpenEditScript: !this.state.isOpenEditScript})
+    }
 
     render() {
-        const { setViewId } = this.props;
+        const { setViewId } = this.props
         return (
-            <div className="App">
-                <p>Step Five</p>
-                <button onClick={() => setViewId(0)}> landing </button>
-                <button onClick={() => setViewId(1)}> step 1 </button>
-                <button onClick={() => setViewId(2)}> step 2 </button>
-                <button onClick={() => setViewId(3)}> step 3 </button>
-                <button onClick={() => setViewId(4)}> step 4 </button>
-                <button onClick={() => setViewId(5)}> step 5 </button>
-                <button onClick={() => setViewId(6)}> step 6 </button>
-                <button onClick={() => setViewId(7)}> step 7 </button>            </div>
+            <div className='container-step5'>
+                <div className='window' id='test'>
+                    <div className='header-window'>
+                        <span>Kernel</span>
+                    </div>
+                    <div className='top-panel'>
+                        <div className='path'>
+                            <span>C:/secret-users/JSUnHackeur/malicious/program/</span>
+                        </div>
+                    </div>
+                    <div className='main-content'>
+                        <div className='content'>
+                            <div className='edit-script-button' onClick={() => setViewId(6)}>
+                                Edit Script
+                            </div>
+                            <img className='matrix-gif' src='https://thumbs.gfycat.com/AliveAdmirableEidolonhelvum-max-1mb.gif'/>
+                        </div>
+                    </div>
+                </div>
+            </div>
         )
     }
 }

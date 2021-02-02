@@ -1,0 +1,41 @@
+.container-step6 {
+    padding: 10px 50px 10px 50px;
+}
+
+.border-white {
+    border: 1px solid #ecf0f1;
+}
+
+.user-select-none {
+    user-select: none;
+}
+
+.missing-line {
+    background-color: #282c34;
+    color: #00b894;
+    border: none;
+    font-size: 16px;
+    margin-left: 5px;
+    font-weight: 700;
+    border-bottom: 1px solid #03dd5e;
+    margin: 0;
+}
+
+.missing-line:focus {
+    outline: none;
+}
+
+.save-button {
+    border: 1px solid #00e760;
+    border-radius: 5px;
+    background-color: #03dd5e;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0px;
+    width: 50px;
+    cursor: pointer;
+    user-select: none;
+    margin: 5px;
+    text-align: center;
+    align-self: end;
+}
