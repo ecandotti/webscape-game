@@ -95,10 +95,10 @@ export default class StepThree extends React.Component {
                             }
                         </div>
                     </div>
-                    <Modal isOpen={this.state.isOpenLog} style={{content: {padding: '0px'}}}>
+                    <Modal isOpen={this.state.isOpenLog} style={{content: {padding: '0px', height: '300px'}}}>
                         <ErrorLog touchErrorLog={this.touchErrorLog}/>
                     </Modal>
-                    <Modal isOpen={this.state.isOpenErrorMsg} style={{content: {padding: '0px', background: '#2d3436', color: 'red'}}}>
+                    <Modal isOpen={this.state.isOpenErrorMsg} style={{content: {padding: '0px', background: '#2d3436', color: 'red', height: '300px'}}}>
                         <ErrorMsg touchErrorMsg={this.touchErrorMsg} />
                     </Modal>
                     <Modal isOpen={this.state.isOpenTerminal} style={{content: {padding: '0px', background: '#2d3436'}}}>

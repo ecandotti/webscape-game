@@ -13,7 +13,7 @@ const ErrorLog = ({touchErrorLog}) => {
             </div>
             <div className='error-content'>
                 <div className='error-item'>
-                  <p style={{margin: '0px'}}>
+                  <div style={{margin: '0px'}}>
                         DH5372:<br/>
                             Too many packets sent to the server<br/><br/>
 
@@ -664,7 +664,7 @@ const ErrorLog = ({touchErrorLog}) => {
                         Resolution:<br/>
                         Resubmit your source code to your COBOL system to try to obtain valid intermediate code.<br/>
 
-                    </p>  
+                    </div>  
                 </div>
             </div>
         </div> 

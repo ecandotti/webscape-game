@@ -134,7 +134,7 @@
 }
 
 /* ERROR CONTENT */
-.error-item > p {
+.error-item > div {
     overflow-y: scroll;
-    height: 600px;
+    height: 270px;
 }
