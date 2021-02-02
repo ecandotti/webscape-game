@@ -28,7 +28,7 @@ export default class ForgotPassword extends React.Component{
     };
 
     handleSubmit = () => {
-        if (this.state.animal == "Médor" && this.state.location == "Roubaix" && this.state.sport == "Bowling") {
+        if (this.state.animal == "Rex" && this.state.location == "Roubaix" && this.state.sport == "Bowling") {
             this.setState({ showPassword: true, showError: false })
         } else {
             this.setState({ showError: true })
@@ -36,10 +36,11 @@ export default class ForgotPassword extends React.Component{
     };
 
     render() {
-        const { setViewId } = this.props;
+        const { closeModal } = this.props;
         const { showPassword, showError } = this.state;
         return (
             <div className="App">
+                <div className="close" onClick={closeModal}><span>✖</span></div>
                 <div className="container">
                     <div className="inputAnswer">
                         <label className="inputText">Quel était le nom de votre animal de compagnie</label>

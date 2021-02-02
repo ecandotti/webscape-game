@@ -49,6 +49,7 @@ export default class StepThree extends React.Component {
     };
 
     render() {
+        const { redirectToLogin } = this.props;
         return (
             <div className='container-step3'>
                 <div className='window' id='test'>
@@ -101,7 +102,7 @@ export default class StepThree extends React.Component {
                         <ErrorMsg touchErrorMsg={this.touchErrorMsg} />
                     </Modal>
                     <Modal isOpen={this.state.isOpenTerminal} style={{content: {padding: '0px', background: '#2d3436'}}}>
-                        <Terminal touchTerminal={this.touchTerminal} setWriteValidCommand={this.setWriteValidCommand}/>
+                        <Terminal redirectToLogin={redirectToLogin} touchTerminal={this.touchTerminal} setWriteValidCommand={this.setWriteValidCommand}/>
                     </Modal>
                 </div>
             </div>

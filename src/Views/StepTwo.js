@@ -12,10 +12,10 @@ export default class StepTwo extends React.Component {
         this.state = {
             email: "",
             password: "",
-            isModalOpen: false
+            isModalOpen: false,
+            wrongPassword: false,
+            ...props.loginState
         };
-
-
     }
 
     handleChangeEmail = (event) => {
@@ -27,12 +27,26 @@ export default class StepTwo extends React.Component {
     };
 
     handleSubmit = () => {
-        console.log('Login');
+        const { password, email } = this.state;
+        const { setViewId } = this.props;
+        if (email === "LeBossDu13" && password === "MotDePasse12345") {
+            setViewId(3)
+        } else if (email === "JSUnHacker" && password === "p@ssw0rd") {
+            setViewId(4)
+        }
+        else {
+            this.setState({wrongPassword: true})
+        }
+    };
+
+    openModal = () => {
+          const { isModalOpen } = this.state;
+          this.setState({isModalOpen: !isModalOpen})
     };
 
     render() {
-        const { setViewId } = this.props;
-        const { email, password, isModalOpen } = this.state;
+        console.log(this.state);
+        const { email, password, isModalOpen, wrongPassword } = this.state;
         return (
             <div className="App">
                 <div className="loginBox">
@@ -41,7 +55,7 @@ export default class StepTwo extends React.Component {
                     </div>
                     <div className="inputLogin">
                         <label className="inputText">Nom d'utilisateur</label>
-                        <input className="inputInput" type="text" name="email" value="LeBossDu13" disabled
+                        <input className="inputInput" type="text" name="email" value={email} disabled
                                onChange={this.handleChangeEmail}/>
                     </div>
                     <div className="inputLogin">
@@ -50,12 +64,17 @@ export default class StepTwo extends React.Component {
                                onChange={this.handleChangeMdp}/>
                     </div>
                     <div className="inputBottom">
-                        <a className="mdpoublie" onClick={() => this.setState({isModalOpen: !isModalOpen})}>
+                        <a className="mdpoublie" onClick={() => this.openModal()}>
                             Mot de passe oublié ?
                         </a>
                         <bouton className="inputSubmit" onClick={this.handleSubmit}>Connexion</bouton>
+                        {
+                            wrongPassword ?
+                                <p style={{color: "red" }}> mauvais mot de passe </p> :
+                                <> </>
+                        }
                         <Modal isOpen={isModalOpen}>
-                            <ForgotPassword />
+                            <ForgotPassword closeModal={this.openModal} />
                         </Modal>
                     </div>
                 </div>
