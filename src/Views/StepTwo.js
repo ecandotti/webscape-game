@@ -35,7 +35,7 @@ export default class StepTwo extends React.Component {
         return (
             <div className="App">
                 <div className="loginBox">
-                    <div className="title">
+                    <div className="titre">
                         <h2>Login</h2>
                     </div>
                     <div className="inputLogin">
