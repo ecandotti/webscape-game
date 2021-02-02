@@ -1,14 +1,21 @@
-import React from "react"
+import React from "react";
+import Modal from 'react-modal';
+import ForgotPassword from "../components/ForgotPassword";
 import '../styles/App.css';
 import '../styles/StepTwo.css'
+
+Modal.setAppElement('#root');
 
 export default class StepTwo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             email: "",
-            password: ""
+            password: "",
+            isModalOpen: false
         };
+
+
     }
 
     handleChangeEmail = (event) => {
@@ -25,7 +32,7 @@ export default class StepTwo extends React.Component {
 
     render() {
         const { setViewId } = this.props;
-        const { email, password } = this.state;
+        const { email, password, isModalOpen } = this.state;
         return (
             <div className="App">
                 <div className="loginBox">
@@ -43,10 +50,13 @@ export default class StepTwo extends React.Component {
                                onChange={this.handleChangeMdp}/>
                     </div>
                     <div className="inputBottom">
-                        <a className="mdpoublie" onClick={() => setViewId(3)}>
+                        <a className="mdpoublie" onClick={() => this.setState({isModalOpen: !isModalOpen})}>
                             Mot de passe oublié ?
                         </a>
                         <bouton className="inputSubmit" onClick={this.handleSubmit}>Connexion</bouton>
+                        <Modal isOpen={isModalOpen}>
+                            <ForgotPassword />
+                        </Modal>
                     </div>
                 </div>
             </div>
