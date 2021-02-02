@@ -13,8 +13,6 @@ const validatedGoalChars = [
     true,
     true,
     true,
-    true,
-    true,
 ];
 
 export default class StepOne extends React.Component{
@@ -22,18 +20,16 @@ export default class StepOne extends React.Component{
         super(props);
         this.state = {
             goalChars: [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
             ]
         }
     }
@@ -47,7 +43,13 @@ export default class StepOne extends React.Component{
     isPasswordFound = () => {
         const { setViewId } = this.props;
         const { goalChars } = this.state;
-        if (goalChars === validatedGoalChars) {
+        console.log(goalChars);
+        console.log(validatedGoalChars);
+        let valid;
+        goalChars.forEach((item) =>
+            valid = item
+        );
+        if (valid) {
             setViewId(2)
         }
     };
@@ -155,7 +157,7 @@ export default class StepOne extends React.Component{
                             mes enfants aled
                         </p>
                         <p className="DescriptionText">
-                            <a href="https://biographie-jean-michel.herokuapp.com/" className="jeanmich">Voir plus</a>
+                            La suite de ma Biographie: <a href="https://biographie-jean-michel.herokuapp.com/" className="jeanmich">Lien</a>
                         </p>
                     </div>
                 </div>
