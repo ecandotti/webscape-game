@@ -38,8 +38,9 @@ export default class StepOne extends React.Component{
             <div className="App">
                 <div className="StepOneContainer">
                     <div className="LeftSide">
+                    
                         <div className="TextContainer">
-                            <h1> La premiere galere de Jean miche miche</h1>
+                        <h2> La première galère de Jean-Michel </h2>
                             <p className="Text">
                                 Pour cette première étape, Jean-Michel doit se connecter au compte
                                 d’un administrateur afin d’avoir&nbsp;
@@ -74,7 +75,7 @@ export default class StepOne extends React.Component{
                                 onc de trouver son nom d’
                                 <span className="specialText" onClick={() => this.discoverGoalChar(7) }>u</span>
                                 tilisateur.
-                                <br/>
+                                <br/> <br/>
                                 Il sait pertinemment que la page [nom d'utilisateur].html lui sera utile.
 
                             </p>
@@ -126,10 +127,10 @@ export default class StepOne extends React.Component{
                             Salaire: 5 centimes de l’heure
                         </p>
                         <p className="DescriptionText">
-                            Situation familiale: est marié et a 5 enfant
+                            Situation familiale: est marié et a 5 enfants
                         </p>
                         <p className="DescriptionText">
-                            Commentaire: j’ai pas de quoi nourrir
+                            Commentaire: je n'ai pas de quoi nourrir
                             mes enfants aled
                         </p>
                     </div>
