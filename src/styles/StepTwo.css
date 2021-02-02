@@ -1,6 +1,6 @@
 .loginBox {
-  width: 50rem;
-  height: 22.5rem;
+  width: 30em;
+  height: 12.5em;
   background-color: white;
   color: black;
   display: flex;
@@ -49,7 +49,7 @@
   background: rgb(1, 23, 220);
   color: white;
   text-align: center;
-  width: 11rem;
+  width: 5em;
   border-radius: 50px;
 }
 
@@ -71,7 +71,43 @@
   cursor: pointer;
 }
 
-.title h2{
+.titre h2{
   padding: 0;
   font-size: 1.35em;
+}
+
+
+@media screen and (max-height: 880px){
+  .loginBox {
+    height: 15em;
+  }
+}
+
+@media screen and (max-height: 440px){
+  .loginBox {
+    height: 17.5em;
+  }
+}
+
+@media screen and (max-width: 900px){
+  .loginBox {
+    width: 25em;
+    padding-bottom: 2em;
+  }
+
+  .inputSubmit{
+    position: absolute;
+    right: 0;
+    bottom: -2em;
+  }
+
+  .mdpoublie {
+    bottom: -2em;
+  }
+}
+
+@media screen and (max-width: 440px){
+  .loginBox {
+    width: 20em;
+  }
 }
