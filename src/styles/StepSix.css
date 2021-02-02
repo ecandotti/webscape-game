@@ -1,0 +1,18 @@
+.container {
+  border-radius: 25px;
+  background: white;
+  width: 75%;
+  padding: 2rem;
+  color: black;
+}
+
+.inputAnswer {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputText {
+  padding-left: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
