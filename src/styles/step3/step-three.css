@@ -13,6 +13,7 @@
 /* HEADER WINDOW */
 
 .header-window {
+    position: static;
     display: flex;
     flex-flow: row nowrap;
     padding: 5px;
@@ -20,6 +21,10 @@
     border-bottom: 1px solid #424d50;
     background-color: #dbdcdd;
     user-select: none;
+}
+
+.right-side {
+    margin-right: 10px;
 }
 
 /* TOP PANEL */
