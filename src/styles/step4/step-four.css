@@ -1,3 +1,7 @@
+.container-step4 {
+    padding: 10px 50px 10px 50px;
+}
+
 .task-bar {
     position: fixed;
     bottom: 0;
@@ -15,7 +19,7 @@
     height: 30px;
     margin: 0px 5px 0px 5px;
     padding: 5px;
-    cursor:no-drop;
+    cursor: pointer;
 }
 
 .active-task {

@@ -50,7 +50,7 @@ export default class StepThree extends React.Component {
 
     render() {
         return (
-            <div className='App container'>
+            <div className='container-step3'>
                 <div className='window' id='test'>
                     <div className='header-window'>
                         <span>Explorer</span>

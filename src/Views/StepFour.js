@@ -24,7 +24,7 @@ export default class StepFour extends React.Component {
     render() {
         const { setViewId } = this.props
         return (
-            <div className='App container'>
+            <div className='container-step4'>
                 <div className='window' id='test'>
                     <div className='header-window'>
                         <span>Explorer</span>
