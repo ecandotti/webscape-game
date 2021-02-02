@@ -7,22 +7,22 @@ const Terminal = ({touchTerminal, setWriteValidCommand}) => {
     const [prompt, setPrompt] = useState('')
 
     const message = 
-        <>
+        <div>
             Unexpected error during the executinon of the command<br/>
             Error at line 15 character 106<br/>
             Oups no character 5 of line 1<br/>
-            Id:JSUnHacker mdp: ********<br/>
+            <span onClick={() => console.log('redirection')}>ID:JSUnHacker PWD: p@ssw0rd</span><br/>
             But ****** Why, am i broken ?<br/>
             Something is wrong<br/>
             Maybe my RAM is broken :()<br/>
             Ah it's why you executed me<br/>
-            Sorry but, I'm not available for the moment!<br/>
-        </>
+            Sorry but, I'm not available for the moment!
+        </div>
 
     const verifyCommand = ({key, target}) => {
         if(key === 'Enter'){
             console.log('enter pressed')
-            if (target.value === 'ram -u -info') {
+            if (target.value === 'ram -u --info') {
                 setWriteValidCommand()
                 isCorrectCommandLine(true)
                 setPrompt('')

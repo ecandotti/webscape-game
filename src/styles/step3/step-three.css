@@ -13,6 +13,7 @@
 /* HEADER WINDOW */
 
 .header-window {
+    position: sticky;
     display: flex;
     flex-flow: row nowrap;
     padding: 5px;
@@ -92,6 +93,10 @@
     cursor: pointer;
 }
 
+#current-user {
+    color: blue;
+}
+
 /* CONTENT */
 
 .content {
@@ -108,7 +113,7 @@
     border: 0px solid #ecf0f1;
     padding: 15px;
     width: 80px;
-    height: 80px;
+    height: 100px;
     cursor: pointer;
     user-select: none;
 }
@@ -126,4 +131,10 @@
 .file > span {
     margin: 5px;
     font-size: 18px;
+}
+
+/* ERROR CONTENT */
+.error-item > p {
+    overflow-y: scroll;
+    height: 600px;
 }

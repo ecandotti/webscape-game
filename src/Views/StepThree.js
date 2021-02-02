@@ -1,19 +1,17 @@
 import React from 'react'
 import Modal from 'react-modal'
-
 import ErrorMsg from '../components/ErrorMsg'
 import ErrorLog from '../components/ErrorLog'
 import Terminal from '../components/Terminal'
-
 import '../styles/App.css'
 import '../styles/step3/step-three.css'
 
 
-Modal.setAppElement('#root')
+Modal.setAppElement('#root');
 
 export default class StepThree extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
             state: 'state',
             isOpenLog: false,
@@ -21,42 +19,39 @@ export default class StepThree extends React.Component {
             isOpenErrorMsg: false,
             errorGenerated: false,
             writeValidCommand: false
-        }
-        this.touchErrorLog = this.touchErrorLog.bind(this)
-        this.touchTerminal = this.touchTerminal.bind(this)
-        this.touchErrorMsg = this.touchErrorMsg.bind(this)
-        this.setWriteValidCommand = this.setWriteValidCommand.bind(this)
+        };
     }
 
+    touchScript = () => {
+        this.setState({isOpenScript: false})
+    };
 
-    touchErrorLog() {
+    touchErrorLog = () => {
         this.setState({isOpenLog: !this.state.isOpenLog})
-    }
+    };
+    
 
-    touchErrorMsg() {
+    touchErrorMsg = () => {
         this.setState({isOpenErrorMsg: !this.state.isOpenErrorMsg})
-    }
+    };
 
-    touchTerminal() {
+    touchTerminal = () => {
+
         this.setState({isOpenTerminal: !this.state.isOpenTerminal})
-    }
+    };
 
-    setWriteValidCommand() {
-        this.setState({writeValidCommand: true})
-        console.log('validate !')
-    }
+    setWriteValidCommand = () => {
+        this.setState({writeValidCommand: true});
+    };
 
-    openScript() {
+    openScript = () => {
         if (!this.state.errorGenerated) {
-            this.setState({errorGenerated: true})
-            this.touchErrorMsg()
-            console.log('fichier log généré')
-        } else if (this.state.errorGenerated && this.state.writeValidCommand) {
-            console.log('done')
+            this.setState({errorGenerated: true});
+            this.touchErrorMsg();
         } else {
-            console.log('error')
+            this.touchErrorMsg();
         }
-    }
+    };
 
     render() {
         return (
@@ -81,7 +76,7 @@ export default class StepThree extends React.Component {
                             <span className='hoverable'>Desktop</span>
                             <span className='hoverable'>Download</span>
                             <span>Profil</span>
-                            <span className='hoverable'>My Documents</span>
+                            <span className='hoverable' id='current-user'>Jean-Michel</span>
                             <span>Users</span>
                             <span className='hoverable'>Alex</span>
                             <span className='hoverable'>Sanji</span>
@@ -92,13 +87,14 @@ export default class StepThree extends React.Component {
                         <div className='content'>
                             <div className='file' onDoubleClick={() => this.openScript()}>
                                 <img src='https://icons.iconarchive.com/icons/untergunter/leaf-mimes/512/text-x-script-icon.png' alt=''/>
-                                <span>script.py</span>
+                                <span>Who Eats myRAM.exe</span>
                             </div>
 
-                            {this.state.errorGenerated &&
+                            {
+                                this.state.errorGenerated &&
                                 <div className='file' onDoubleClick={() => this.touchErrorLog()}>
                                     <img src='https://www.safety-kit.fr/wp-content/uploads/2020/10/safety-kit-icone-txt.png' alt=''/>
-                                    <span>error.log</span>
+                                    <span>error.txt</span>
                                 </div>
                             }
                         </div>

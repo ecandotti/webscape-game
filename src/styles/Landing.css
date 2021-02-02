@@ -1,0 +1,51 @@
+h2 {
+    margin: 0;
+    padding: 1rem 0 0;
+}
+
+.overlap {
+    border-radius: 25px;
+    background: white;
+    width: 75%;
+    height: 75%;
+    padding: 2rem;
+}
+
+.intro {
+    border-radius: 25px;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    padding: 1rem;
+    font-size: 0.9em;
+    color: black;
+}
+
+.title {
+    color:black;
+}
+
+.start {
+    font-size: 1.35em;
+    background-color: rgb(1, 23, 220);
+    border: 0;
+    line-height: 1.5;
+    padding: 0 3.5rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.start:hover,
+.start:focus {
+    background-color: #eee;
+    color: rgb(1, 23, 220);
+}
+
+@media screen and (width: 320px)  {
+    .start {
+        padding: 0 1.5rem;
+    }
+}
