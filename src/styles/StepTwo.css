@@ -105,3 +105,9 @@
     bottom: -2em;
   }
 }
+
+@media screen and (max-width: 440px){
+  .loginBox {
+    width: 20em;
+  }
+}
