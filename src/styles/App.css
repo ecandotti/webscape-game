@@ -1,3 +1,7 @@
+body, html {
+  background-color: #282c34;
+}
+
 .App {
   text-align: center;
   background-color: #282c34;
@@ -48,15 +52,4 @@
 
 .App {
   display: flex;
-}
-
-
-.overlap {
-  width: 60rem;
-  height: 40rem;
-}
-
-.intro {
-  width: 50rem;
-  height: 30rem;
 }

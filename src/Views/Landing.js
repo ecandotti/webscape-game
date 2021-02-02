@@ -13,14 +13,10 @@ export default class Landing extends React.Component{
     render() {
         const { setViewId } = this.props;
         return (
-                <div className="App">
-                    <div className="overlap">
-                        <div className="title">
-                            <p>Escape Game</p>
-                        </div>
-                        <div className="intro">
-                            <p></p>
-                        </div>  
+            <div className="App">
+                <div className="overlap">
+                    <div className="title">
+                        <h2>ESCAPE GAME : LES GALERES DE JEAN-MICHEL</h2>
                     </div>
                     <div className="intro">
                         <p>Bonjour et bienvenue sur notre projet de groupe réalisé dans le cadre du Challenge 48h.<br/>
@@ -32,7 +28,7 @@ export default class Landing extends React.Component{
                     </div>
                     <button className="start" onClick={() => setViewId(2)}> Commencer </button>
                 </div>
-            
+           </div>
         )
     }
 }
