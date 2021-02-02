@@ -155,7 +155,7 @@ export default class StepOne extends React.Component{
                             mes enfants aled
                         </p>
                         <p className="DescriptionText">
-                            <a href="" className="jeanmich">Voir plus</a>
+                            <a href="https://biographie-jean-michel.herokuapp.com/" className="jeanmich">Voir plus</a>
                         </p>
                     </div>
                 </div>
