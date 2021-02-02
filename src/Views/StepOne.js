@@ -100,8 +100,6 @@ export default class StepOne extends React.Component{
                                 onc de trouver son nom d’
                                 <span className="specialText" onClick={() => this.discoverGoalChar(7) }>u</span>
                                 tilisateur.
-                                <br/> <br/>
-                                Il sait pertinemment que la page [nom d'utilisateur].html lui sera utile.
 
                             </p>
                         </div>
@@ -123,7 +121,7 @@ export default class StepOne extends React.Component{
                     </div>
                     <div className="RightSide">
 
-                            <p className="DescriptionText">
+                            <p className="DescriptionText titre">
                             Biographie de Jean-Michel MICHEL
                         </p>
                         <p className="DescriptionText">
