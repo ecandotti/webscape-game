@@ -8,6 +8,7 @@ import StepFour from "./Views/StepFour";
 import StepFive from "./Views/StepFive";
 import StepSix from "./Views/StepSix";
 import StepSeven from "./Views/StepSeven";
+import StepEight from "./Views/StepEight";
 
 // View Id => 0 = landing,
 
@@ -15,16 +16,13 @@ export default class App extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      viewId: 7,
+      viewId: 0,
       loginState: {
         email: "LeBossDu13",
         password: "",
         redirected: false
       }
     };
-    // this.state = {
-    //   viewId: 7
-    // } // biography
   }
 
   setViewId = (viewId) => {
@@ -77,6 +75,10 @@ export default class App extends React.Component{
       case 7:
         return (
             <StepSeven setViewId={this.setViewId} />
+        );
+      case 8:
+        return (
+            <StepEight setViewId={this.setViewId} />
         );
 
       default:

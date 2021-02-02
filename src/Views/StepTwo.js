@@ -29,9 +29,10 @@ export default class StepTwo extends React.Component {
     handleSubmit = () => {
         const { password, email } = this.state;
         const { setViewId } = this.props;
+        console.log(password, email);
         if (email === "LeBossDu13" && password === "MotDePasse12345") {
             setViewId(3)
-        } else if (email === "JSUnHacker" && password === "p@ssw0rd<") {
+        } else if (email === "JSUnHacker" && password === "p@ssw0rd") {
             setViewId(4)
         }
         else {

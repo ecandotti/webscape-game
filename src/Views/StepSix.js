@@ -5,30 +5,27 @@ import '../styles/step6/step-six.css'
 
 export default class StepFive extends React.Component{
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
             value: ''
         }
     }
 
-    touchEditScript = () => {
-        this.setState({isOpenEditScript: !this.state.isOpenEditScript})
-    }
-
     handleChange = (e) => {
         this.setState({value: e.target.value})
-    }
+    };
 
     checkCode = () => {
-        if (this.state.value === 'i++'){
-            this.props.setViewId(7)
+        const { setViewId } = this.props;
+        const { value } = this.state;
+        if (value === 'i++' || value === 'i += 1' || value === 'i = i + 1'){
+            setViewId(8)
         } else {
             this.setState({value: ''})
         }
-    }
+    };
 
     render() {
-        const { setViewId } = this.props
         return (
             <div className='container-step6'>
                 <div className='terminal-window border-white'>
@@ -44,7 +41,7 @@ export default class StepFive extends React.Component{
                     <div className='terminal-content user-select-none'>
                         <p>
                             i = 0<br/>
-                            while(i) (<br/>
+                            while(i {"< 10"}) (<br/>
                             f := programme lourd<br/>
                             &nbsp;&nbsp;&nbsp;&nbsp;echo f<br/>
                             &nbsp;&nbsp;&nbsp;&nbsp;echo 'Bravo vous avez fini'<br/>

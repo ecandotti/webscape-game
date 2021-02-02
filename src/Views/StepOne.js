@@ -13,8 +13,6 @@ const validatedGoalChars = [
     true,
     true,
     true,
-    true,
-    true,
 ];
 
 export default class StepOne extends React.Component{
@@ -22,8 +20,6 @@ export default class StepOne extends React.Component{
         super(props);
         this.state = {
             goalChars: [
-                false,
-                false,
                 false,
                 false,
                 false,
@@ -47,7 +43,13 @@ export default class StepOne extends React.Component{
     isPasswordFound = () => {
         const { setViewId } = this.props;
         const { goalChars } = this.state;
-        if (goalChars === validatedGoalChars) {
+        console.log(goalChars);
+        console.log(validatedGoalChars);
+        let valid;
+        goalChars.forEach((item) =>
+            valid = item
+        );
+        if (valid) {
             setViewId(2)
         }
     };
@@ -101,19 +103,20 @@ export default class StepOne extends React.Component{
                             </p>
                         </div>
                         <div className="GoalWordContainer" onClick={this.isPasswordFound}>
+                            <p>Le nom d'utilisateur est: &nbsp;</p>
                                 {
                                 // TODO faire une boucle ;)
                                  }
-                                {goalChars[0] ? (<p>L</p>) : <> </>}
-                                {goalChars[1] ? (<p>e</p>) : <> </>}
-                                {goalChars[2] ? (<p>B</p>) : <> </>}
-                                {goalChars[3] ? (<p>o</p>) : <> </>}
-                                {goalChars[4] ? (<p>s</p>) : <> </>}
-                                {goalChars[5] ? (<p>s</p>) : <> </>}
-                                {goalChars[6] ? (<p>D</p>) : <> </>}
-                                {goalChars[7] ? (<p>u</p>) : <> </>}
-                                {goalChars[8] ? (<p>1</p>) : <> </>}
-                                {goalChars[9] ? (<p>3</p>) : <> </>}
+                                {goalChars[0] ? (<p>L</p>) : <p>_&nbsp; </p>}
+                                {goalChars[1] ? (<p>e</p>) : <p>_&nbsp; </p>}
+                                {goalChars[2] ? (<p>B</p>) : <p>_&nbsp; </p>}
+                                {goalChars[3] ? (<p>o</p>) : <p>_&nbsp; </p>}
+                                {goalChars[4] ? (<p>s</p>) : <p>_&nbsp; </p>}
+                                {goalChars[5] ? (<p>s</p>) : <p>_&nbsp; </p>}
+                                {goalChars[6] ? (<p>D</p>) : <p>_&nbsp; </p>}
+                                {goalChars[7] ? (<p>u</p>) : <p>_&nbsp; </p>}
+                                {goalChars[8] ? (<p>1</p>) : <p>_&nbsp; </p>}
+                                {goalChars[9] ? (<p>3</p>) : <p>_&nbsp; </p>}
                         </div>
                     </div>
                     <div className="RightSide">
@@ -155,9 +158,10 @@ export default class StepOne extends React.Component{
                             mes enfants aled
                         </p>
                         <p className="DescriptionText">
-                            <a href="" className="jeanmich">Voir plus</a>
+                            La suite de ma Biographie: <a target="_blank" href="https://biographie-jean-michel.herokuapp.com/" className="jeanmich">Lien</a>
                         </p>
                     </div>
+                    <p></p>
                 </div>
             </div>
         )
