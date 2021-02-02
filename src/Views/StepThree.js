@@ -25,7 +25,6 @@ export default class StepThree extends React.Component {
     touchErrorLog = () => {
         this.setState({isOpenLog: !this.state.isOpenLog})
     };
-    
 
     touchErrorMsg = () => {
         this.setState({isOpenErrorMsg: !this.state.isOpenErrorMsg})
