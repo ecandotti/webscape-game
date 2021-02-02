@@ -19,12 +19,14 @@ export default class Landing extends React.Component{
                         <h2>ESCAPE GAME : LES GALERES DE JEAN-MICHEL</h2>
                     </div>
                     <div className="intro">
-                        <p>Bravo vous avez fini l'escape game!<br/>
+                        <p>
+                            Bravo vous avez fini l'escape game!<br/>
                             Suite a ça Jean-Michel a perdu son stage a Ynov car il a acceder au compte administrateur.<br/>
-                            Mais heureusement pour lui il a pu trouver un emploi<br/><br/>
+                            Mais heureusement pour lui il a pu trouver un emploi en tant que hacker éthique<br/><br/>
 
-                            Le principe est simple, vous devrez résoudre plusieurs mini-jeux / énigmes afin de pouvoir avancer dans l’histoire et aider Jean-Michel à pouvoir travailler sans embûches.<br/><br/>
-                            Appuyez sur le bouton ‘Commencer’ pour débuter la partie.</p>
+                            Cet Escape Game vous a été proposé par l'équipe v composé de : JEAN Louis, JACQUENOD Steven, CANDOTTI Enzo, KIM Injin, MAYER Quentin et GUERARD Robin<br/><br/>
+                            Nous espérons que ça vous a plus!
+                        </p>
                     </div>
                 </div>
             </div>
