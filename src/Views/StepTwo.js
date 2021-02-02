@@ -31,7 +31,7 @@ export default class StepTwo extends React.Component {
         const { setViewId } = this.props;
         if (email === "LeBossDu13" && password === "MotDePasse12345") {
             setViewId(3)
-        } else if (email === "JSUnHacker" && password === "p@ssw0rd") {
+        } else if (email === "JSUnHacker" && password === "p@ssw0rd<") {
             setViewId(4)
         }
         else {
@@ -45,7 +45,6 @@ export default class StepTwo extends React.Component {
     };
 
     render() {
-        console.log(this.state);
         const { email, password, isModalOpen, wrongPassword } = this.state;
         return (
             <div className="App">

@@ -32,7 +32,6 @@ export default class App extends React.Component{
   };
 
   redirectToLogin = () => {
-    console.log("here");
       this.setState({
         viewId: 2,
         loginState: {

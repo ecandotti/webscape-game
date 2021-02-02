@@ -21,21 +21,20 @@ export default class StepOne extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            // goalChars: [
-            //     false,
-            //     false,
-            //     false,
-            //     false,
-            //     false,
-            //     false,
-            //     false,
-            //     false,
-            //     false,
-            //     false,
-            //     false,
-            //     false,
-            // ]
-            goalChars: validatedGoalChars
+            goalChars: [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+            ]
         }
     }
 
@@ -43,7 +42,6 @@ export default class StepOne extends React.Component{
         const { goalChars } = this.state;
         goalChars[id] = true;
         this.setState({ goalChars });
-        console.log(goalChars);
     };
 
     isPasswordFound = () => {
@@ -63,7 +61,6 @@ export default class StepOne extends React.Component{
             <div className="App">
                 <div className="StepOneContainer">
                     <div className="LeftSide">
-                    
                         <div className="TextContainer">
                         <h2> La première galère de Jean-Michel </h2>
                             <p className="Text">
