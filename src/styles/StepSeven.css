@@ -1,0 +1,24 @@
+
+.firstFlex {
+    display: flex;
+    padding: 5rem;
+}
+
+.dog {
+    width: 25%;
+}
+
+.secondFlex {
+    display: flex;
+    padding: 5rem;
+}
+
+.bowling {
+    width: 25%;
+    opacity: 0;
+}
+
+.bowling:hover,
+.bowling:focus {
+    opacity: 1;
+}

@@ -1,7 +1,8 @@
 import React from "react"
 import '../styles/App.css';
-import dog from '../assets/img/dog.jpg'
-import bowling from '../assets/img/bowling-game.jpg'
+import '../styles/StepSeven.css';
+import dog from '../assets/img/dog.jpg';
+import bowling from '../assets/img/bowling-game.jpg';
 
 export default class StepSeven extends React.Component{
     constructor(props) {
@@ -16,20 +17,17 @@ export default class StepSeven extends React.Component{
         const { setViewId } = this.props;
         return (
             <div className="App">
-                <div className="fisrtFlex">
+                <div className="firstFlex">
                     <div >
-                        <img className="dog" src={dog}></img>
-                    </div> 
-
-                    <p>50.68685466387339</p>   
+                        <img className="dog" src={dog} alt="Rex"></img>
+                    </div>
+                    <p className="coordinates">50.68685466387339</p>
                </div>
-
                <div className="secondFlex">
-                    <div >
+                   <p className="coordinates">3.180785903699407</p>
+                   <div >
                         <img className="bowling" src={bowling}></img>
-                    </div> 
-
-                    <p>3.180785903699407</p>   
+                    </div>
                </div>
             </div>
         )
