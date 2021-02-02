@@ -10,7 +10,8 @@ export default class ForgotPassword extends React.Component{
             animal: "",
             location: "",
             sport: "",
-            showPassword: false
+            showPassword: false,
+            showError: false
         }
     }
 
@@ -27,13 +28,16 @@ export default class ForgotPassword extends React.Component{
     };
 
     handleSubmit = () => {
-        console.log('Login');
-        this.setState({ showPassword: true })
+        if (this.state.animal == "Médor" && this.state.location == "Roubaix" && this.state.sport == "Bowling") {
+            this.setState({ showPassword: true, showError: false })
+        } else {
+            this.setState({ showError: true })
+        }
     };
 
     render() {
         const { setViewId } = this.props;
-        const { showPassword } = this.state;
+        const { showPassword, showError } = this.state;
         return (
             <div className="App">
                 <div className="container">
@@ -50,11 +54,14 @@ export default class ForgotPassword extends React.Component{
                     <div className="inputAnswer">
                         <label className="inputText">Quel sport pratiquiez vous enfant ?</label>
                         <input className="inputInput" type="text" name="sport"
-                               onChange={this.handleChangeAnimal}/>
+                               onChange={this.handleChangeSport}/>
                     </div>
                     <button className="start" style={{ marginTop: "2rem" }} onClick={this.handleSubmit}>Valider</button>
                     {showPassword && (
-                        <p>Votre mot de passe est : </p>
+                        <p>Votre mot de passe est : MotDePasse12345</p>
+                    )}
+                    {showError && (
+                        <p>Faux ! Vérifiez bien les majuscules et les accents</p>
                     )}
                 </div>
             </div>
