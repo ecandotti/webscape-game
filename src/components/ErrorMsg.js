@@ -6,7 +6,7 @@ const ErrorMsg = ({touchErrorMsg}) => {
     return ( 
         <div className='error-window'>
             <div className='header-window'>
-                <span>WhoEatsMyRAM.py</span>
+                <span>WhoEatsMyRAM.exe</span>
                 <div className='right-side'>
                     <span>_</span>
                     <span>&#9633;</span>
