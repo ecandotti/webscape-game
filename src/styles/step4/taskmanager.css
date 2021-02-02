@@ -1,0 +1,26 @@
+.taskmanager-content {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.task-running-item {
+    height: 40px;
+    display: flex;
+    flex-flow: row column;
+    align-items: center;
+    border: 1px solid #ffffff;
+    padding: 5px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.task-running-item:hover {
+    border: 1px solid #2980b9;
+    background-color: #33a4f0b9;
+}
+
+.task-running-item > img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
