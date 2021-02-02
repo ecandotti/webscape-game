@@ -4,7 +4,6 @@
 }
 
 .LeftSide {
-    height: 100vh;
     flex: 2;
     display: flex;
     flex-direction: column;
@@ -48,7 +47,6 @@
 .RightSide {
     flex: 1;
     padding: 1rem;
-
 }
 
 .DescriptionText {
