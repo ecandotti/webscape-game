@@ -15,7 +15,7 @@ export default class App extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      viewId: 0,
+      viewId: 7,
       loginState: {
         email: "LeBossDu13",
         password: "",
@@ -32,7 +32,6 @@ export default class App extends React.Component{
   };
 
   redirectToLogin = () => {
-    console.log("here");
       this.setState({
         viewId: 2,
         loginState: {
