@@ -11,10 +11,6 @@ export default class StepFive extends React.Component{
         }
     }
 
-    touchEditScript = () => {
-        this.setState({isOpenEditScript: !this.state.isOpenEditScript})
-    };
-
     handleChange = (e) => {
         this.setState({value: e.target.value})
     };
@@ -22,7 +18,6 @@ export default class StepFive extends React.Component{
     checkCode = () => {
         const { setViewId } = this.props;
         const { value } = this.state;
-        console.log(value);
         if (value === 'i++' || value === 'i += 1' || value === 'i = i + 1'){
             setViewId(8)
         } else {
