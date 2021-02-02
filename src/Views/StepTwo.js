@@ -12,10 +12,9 @@ export default class StepTwo extends React.Component {
         this.state = {
             email: "",
             password: "",
-            isModalOpen: false
+            isModalOpen: false,
+            wrongPassword: false,
         };
-
-
     }
 
     handleChangeEmail = (event) => {
@@ -27,7 +26,13 @@ export default class StepTwo extends React.Component {
     };
 
     handleSubmit = () => {
-        console.log('Login');
+        const { password } = this.state;
+        const { setViewId } = this.props;
+        if (password === "MotDePasse12345") {
+            setViewId(3)
+        } else {
+            this.setState({wrongPassword: true})
+        }
     };
 
     openModal = () => {
@@ -36,9 +41,7 @@ export default class StepTwo extends React.Component {
     };
 
     render() {
-        const { setViewId } = this.props;
-        const { email, password, isModalOpen } = this.state;
-        console.log(isModalOpen)
+        const { email, password, isModalOpen, wrongPassword } = this.state;
         return (
             <div className="App">
                 <div className="loginBox">
@@ -60,6 +63,11 @@ export default class StepTwo extends React.Component {
                             Mot de passe oublié ?
                         </a>
                         <bouton className="inputSubmit" onClick={this.handleSubmit}>Connexion</bouton>
+                        {
+                            wrongPassword ?
+                                <p style={{color: "red"}}> mauvais mot de passe </p> :
+                                <> </>
+                        }
                         <Modal isOpen={isModalOpen}>
                             <ForgotPassword closeModal={this.openModal} />
                         </Modal>
