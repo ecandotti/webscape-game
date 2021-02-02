@@ -53,7 +53,6 @@ export default class StepTwo extends React.Component {
                         <a className="mdpoublie" onClick={() => this.setState({isModalOpen: !isModalOpen})}>
                             Mot de passe oublié ?
                         </a>
-                        
                         <bouton className="inputSubmit" onClick={this.handleSubmit}>Connexion</bouton>
                         <Modal isOpen={isModalOpen}>
                             <ForgotPassword />
