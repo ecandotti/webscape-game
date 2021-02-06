@@ -9,7 +9,7 @@
 - CSS Made in Ynov Students :love_letter:
 - React-Modal to create windows on top of windows 🧠
 
-[Check the result !](https://lesgaleresdejm.heroku/)
+[Check the result !](https://galereofjm.herokuapp.com/)
 
 ## :bulb: Hint ?
 - Step 1 :
